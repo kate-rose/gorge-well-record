@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="What a century of Washington and Oregon well records shows about the 17 oil and gas test holes in the six Columbia River Gorge counties, how one record led to a 10-acre square near Beacon Rock, and how the Gorge fits the national effort to find and plug old wells.">
+<meta property="og:title" content="The Gorge Well Record">
+<meta property="og:description" content="17 old oil and gas test holes on both sides of the Gorge, one record that points to a 10-acre square near Beacon Rock, and a national effort to find and plug old wells.">
+<meta property="og:type" content="article">
+<base target="_blank">
+<style>*,*::before,*::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<script>
+(function(){try{var t=new URLSearchParams(location.search).get('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}})();
+</script>
+<title>The Gorge Well Record</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* Layout: the Forest Promise frame (masthead, big title, stat row, then 5/7 split sections) so the two
+   Open Gorge projects read as siblings. Record excerpts get a typewriter-ish mono "file card" treatment. */
+:root{
+  --bg:#EEF1EC; --panel:#DDE4DD; --ink:#132A31; --muted:#4E6268;
+  --lead:#C46A12; --bar:#6F8F86; --track:#C9D3CC; --rule:#B9C6BE; --card:#F7F8F4;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --serif:"Source Serif 4",Georgia,serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#122A33; --panel:#1B3843; --ink:#EAF0EE; --muted:#9DB3B3;
+    --lead:#F2B14C; --bar:#6E978C; --track:#244652; --rule:#2E5260; --card:#17323C; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#122A33; --panel:#1B3843; --ink:#EAF0EE; --muted:#9DB3B3;
+  --lead:#F2B14C; --bar:#6E978C; --track:#244652; --rule:#2E5260; --card:#17323C; color-scheme:dark;
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.55;}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:clamp(16px,5vw,64px);padding-block:40px 64px;}
+.mast{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;
+  font-weight:600;font-size:15px;color:var(--muted);border-bottom:1px solid var(--rule);padding-bottom:12px;}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(46px,8vw,96px);line-height:.92;margin:28px 0 14px;text-wrap:balance;letter-spacing:-.005em}
+.subhead{font-family:var(--display);font-weight:600;font-size:clamp(22px,2.8vw,30px);color:var(--lead);margin:0 0 16px;text-wrap:balance}
+.dek{font-size:clamp(19px,2.2vw,22px);max-width:52ch;margin:0 0 12px;}
+.why{background:var(--panel);padding:16px 20px;margin:22px 0 0;display:grid;gap:8px;max-width:62ch}
+.why p{margin:0;font-size:clamp(17px,1.9vw,19px)}
+.lede2{font-size:clamp(19px,2.2vw,22px)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px;margin:34px 0 18px;}
+.stat .n{font-family:var(--display);font-weight:700;font-size:clamp(48px,6vw,72px);line-height:.9;font-variant-numeric:tabular-nums;}
+.stat .n.lead{color:var(--lead)}
+.stat .l{font-size:15px;color:var(--muted);margin-top:6px;max-width:28ch}
+section{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,5vw,64px);padding-block:44px;border-top:1px solid var(--rule);}
+section.one{grid-template-columns:1fr}
+section > *{min-width:0}
+@media (max-width:760px){section{grid-template-columns:1fr}}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(32px,4vw,46px);line-height:.98;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--display);font-weight:700;font-size:24px;line-height:1.05;margin:0 0 6px;text-wrap:balance}
+p{margin:0 0 14px;max-width:62ch}
+.muted{color:var(--muted)}
+.small{font-size:15px}
+figure{margin:0}
+figcaption{font-size:14px;color:var(--muted);margin-top:10px;max-width:62ch}
+a{color:inherit;text-decoration-color:var(--lead);text-underline-offset:3px}
+a:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--lead);outline-offset:2px}
+
+/* map */
+.map svg{width:100%;height:auto;display:block}
+.map .cty{fill:none;stroke:var(--rule);stroke-width:1.2}
+.map .cty.focus{fill:var(--panel);stroke:var(--muted);stroke-width:1.4}
+.map .nsa{fill:none;stroke:var(--bar);stroke-width:2.2;stroke-dasharray:6 5}
+.map .cname{font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:.14em;fill:var(--muted);text-anchor:middle}
+.map .well{stroke:var(--bg);stroke-width:2.5}
+.map .well.open{fill:var(--lead)}
+.map .well.plugged,.map .well.closed{fill:var(--bar)}
+.map .wl{font-family:var(--display);font-weight:600;font-size:21px;fill:var(--ink);paint-order:stroke;stroke:var(--bg);stroke-width:5px}
+.map .key text{font-family:var(--display);font-size:18px;fill:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 20px;font-family:var(--display);font-size:17px;color:var(--muted);margin-top:8px}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.dot.ring{background:none;border:2px dashed var(--lead);width:16px;height:16px;vertical-align:-3px}
+.map .approx{fill:none;stroke:var(--lead);stroke-width:2;stroke-dasharray:4 4}
+.tablebox{overflow-x:auto;border-top:2px solid var(--ink)}
+table.ledger{border-collapse:collapse;width:100%;min-width:760px;font-size:15.5px}
+.ledger th{font-family:var(--display);font-weight:600;font-size:15px;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--rule)}
+.ledger td{padding:9px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+.ledger td.y{font-family:var(--display);font-weight:700;font-size:19px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.ledger td.open{font-family:var(--display);font-weight:600;color:var(--lead)}
+.ledger td.closed{font-family:var(--display);font-weight:600;color:var(--bar)}
+.ledger tr.hl td{background:var(--card)}
+
+/* record cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:8px}
+.card{background:var(--card);border:1px solid var(--rule);padding:14px 16px;display:grid;gap:8px;align-content:start}
+.card .yr{font-family:var(--display);font-weight:800;font-size:40px;line-height:.9;font-variant-numeric:tabular-nums}
+.card .yr.lead{color:var(--lead)}
+.card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-family:var(--mono);font-size:13px;line-height:1.45}
+.card dt{color:var(--muted)}
+.card dd{margin:0}
+.card p{font-size:15.5px;margin:0}
+.status{font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:.02em}
+.status.open{color:var(--lead)}
+.status.plugged{color:var(--bar)}
+
+/* record excerpt */
+.record{background:var(--card);border:1px solid var(--rule);padding:14px 16px;font-family:var(--mono);font-size:13.5px;line-height:1.6;overflow-x:auto}
+.record .k{color:var(--muted)}
+.record mark{background:none;color:var(--lead);font-weight:700}
+
+/* photo slider */
+.slider{position:relative;width:100%;aspect-ratio:1200/1189;max-width:100%;overflow:hidden;border:1px solid var(--rule);background:var(--panel);touch-action:pan-y}
+.slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;user-select:none;-webkit-user-drag:none}
+.slider .top{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+.slider .handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;background:var(--lead);transform:translateX(-50%);pointer-events:none}
+.slider .handle::after{content:"";position:absolute;top:50%;left:50%;width:30px;height:30px;border-radius:50%;background:var(--lead);transform:translate(-50%,-50%);box-shadow:0 0 0 3px var(--bg)}
+.slider .tag{position:absolute;top:10px;font-family:var(--display);font-weight:700;font-size:18px;padding:3px 9px;background:var(--bg);color:var(--ink);pointer-events:none}
+.slider .tag.l{left:10px}.slider .tag.r{right:10px}
+.slider input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.slider:has(input:focus-visible){outline:2px solid var(--lead);outline-offset:3px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.strip figure{display:grid;gap:4px}
+.strip img{display:block;width:100%;height:auto;border:1px solid var(--rule)}
+.strip span{font-family:var(--display);font-weight:600;font-size:16px;color:var(--muted)}
+
+/* bars */
+.bars{display:grid;gap:9px;margin-top:6px}
+.bar{display:grid;grid-template-columns:minmax(9rem,13rem) 1fr;gap:12px;align-items:center}
+.bar .lab{font-family:var(--display);font-weight:600;font-size:17px;line-height:1.1}
+.bar .lab small{display:block;font-weight:500;color:var(--muted);font-size:14px}
+.bar .track{background:var(--track);height:22px;position:relative}
+.bar .fill{background:var(--bar);height:100%}
+.bar .fill.state{background:var(--lead)}
+.bar .val{position:absolute;left:calc(var(--w) + 8px);top:50%;transform:translateY(-50%);font-family:var(--display);font-weight:700;font-size:17px;font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (max-width:520px){.bar{grid-template-columns:1fr}.bar .val{left:auto;right:6px;color:var(--ink)}}
+
+/* steps */
+ol.steps{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;counter-reset:s}
+ol.steps li{counter-increment:s;border-top:3px solid var(--bar);padding-top:10px;font-size:16px}
+ol.steps li::before{content:counter(s);display:block;font-family:var(--display);font-weight:800;font-size:34px;line-height:1;color:var(--lead);margin-bottom:4px}
+ol.steps b{font-family:var(--display);font-weight:700;font-size:20px;display:block;line-height:1.1;margin-bottom:4px}
+
+.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px 28px;margin-top:6px}
+.roles h3{font-size:22px;color:var(--lead)}
+.roles p{font-size:16px}
+.note{background:var(--panel);padding:14px 16px;font-size:16px;max-width:none}
+ul.tools{margin:0;padding-left:1.1em;max-width:62ch}
+ul.tools li{margin-bottom:10px}
+.sources{font-size:15px;padding-left:1.1em}
+.sources li{margin-bottom:6px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="mast"><span>Skamania Dispatch · Open Gorge community records project</span><span>Records as of September 2026</span></div>
+
+  <h1>The Gorge Well Record</h1>
+  <p class="subhead">Neighbors using public records to find old oil and gas wells in the Gorge, so they can be sealed for good</p>
+  <p class="dek">Washington and Oregon have each kept records of oil and gas test wells for more than a century. Washington's file lists 830 wells drilled since 1890. Oregon's geologists catalogued the state's known attempts going back to its first oil venture in 1902.</p>
+  <p class="dek">In the six counties along the Columbia River Gorge, those records hold 17 test holes on both sides of the river, from a wildcat company west of Dufur before 1907 to a 12,430-foot hole near Alderdale in 2008. One of them, drilled in 1949 just west of Beacon Rock, is the only one inside the National Scenic Area. The record says it was drilled. It doesn't say it was ever sealed. That one line was enough to start an investigation anyone can join.</p>
+
+  <div class="why" role="note" aria-label="Why it matters">
+    <p><strong>An old well is a hole drilled deep into the ground.</strong> If it was never sealed, gas can leak up, and water can move between underground layers, including the water people drink.</p>
+    <p><strong>Sealing one is routine work,</strong> and public money exists to pay for it.</p>
+    <p><strong>The hard part is knowing exactly where it is.</strong> That's the part neighbors can do.</p>
+  </div>
+
+  <div class="stats" role="list">
+    <div class="stat" role="listitem"><div class="n">17</div><div class="l">oil and gas test holes on record in the six Gorge counties, Washington and Oregon</div></div>
+    <div class="stat" role="listitem"><div class="n">1</div><div class="l">of them inside the Columbia River Gorge National Scenic Area</div></div>
+    <div class="stat" role="listitem"><div class="n lead">1949</div><div class="l">Kady-Olsen No. 1 drilled near Beacon Rock, with no plugging on record</div></div>
+    <div class="stat" role="listitem"><div class="n">117,672</div><div class="l">orphan wells on the national list USGS compiled from state records</div></div>
+  </div>
+
+  <section class="one">
+    <div>
+      <h2>What the states kept</h2>
+      <p>On the Washington side, the Washington Geological Survey keeps the state's oil and gas well file. On the Oregon side, the Department of Geology and Mineral Industries (DOGAMI) keeps permit records back to the early 1950s. For earlier wells, it published a county-by-county list of every drilling attempt its geologists could document, first compiled in 1954 and revised in 1965.</p>
+      <p>Most wells here were dry holes, and neither state has had large-scale commercial oil production. But each attempt left a record: the company, the dates, the depth, what the driller saw on the way down, and sometimes what happened to the hole afterward.</p>
+      <p>In the six Gorge counties that record holds 17 test holes: seven in Washington (Clark, Skamania and Klickitat) and ten in Oregon (Multnomah and Wasco). Hood River County has none on record. Only one sits inside the National Scenic Area.</p>
+      <p class="small muted">Anyone can browse Washington's records on the free <a href="https://geologyportal.dnr.wa.gov/">Washington Geologic Information Portal</a>, and Oregon's in DOGAMI's <a href="https://pubs.oregon.gov/dogami/mp/MP-06.pdf">Oil and Gas Exploration in Oregon</a>.</p>
+    </div>
+    <figure class="map">
+      <!--MAP-->
+      <div class="legend"><span><span class="dot" style="background:var(--lead)"></span>No plugging or closure on record</span><span><span class="dot" style="background:var(--bar)"></span>Plugged, or permit closed</span><span><span class="dot ring"></span>Placed from a mileage description, approximate</span></div>
+      <figcaption>Washington locations from the DNR well file; Oregon locations from DOGAMI permit data and its 1965 report. Older wells were placed from legal descriptions or mileage ("10 miles west of Dufur on Ramsey Creek"), so their points are approximate.</figcaption>
+    </figure>
+  </section>
+
+  <section class="one">
+    <div>
+      <h2>The record, both sides of the river</h2>
+      <p>Read together, the two states' records span more than a century of people looking for oil and gas in and around the Gorge.</p>
+      <div class="tablebox">
+      <table class="ledger">
+        <thead><tr><th scope="col">Year</th><th scope="col">Well</th><th scope="col">Where</th><th scope="col">Depth</th><th scope="col">What the record says</th><th scope="col">Status on record</th></tr></thead>
+        <tbody>
+          <tr><td class="y">before 1907</td><td>Dufur Oil Co., 5 holes</td><td>Wasco, OR · 5 mi west of Dufur on Fifteen-Mile Creek</td><td>about 500 ft</td><td>Listed from a 1921 geology report</td><td class="open">Not in the permit database</td></tr>
+          <tr><td class="y">1907</td><td>Beavis May Oil Co.</td><td>Wasco, OR · 10 mi west of Dufur on Ramsey Creek</td><td>1,710 ft</td><td>Listed from a 1921 geology report</td><td class="open">Not in the permit database</td></tr>
+          <tr><td class="y">1919</td><td>Beavis May Oil Co.</td><td>Wasco, OR · about 200 ft from the 1907 well</td><td>1,125+ ft</td><td>Listed from a 1921 geology report</td><td class="open">Not in the permit database</td></tr>
+          <tr><td class="y">1931</td><td>Gas-Ice Corp. Nos. 8, 10 and 14</td><td>Klickitat, WA · near Klickitat</td><td>160 to 248 ft</td><td>"Many developed springs and drilled wells producing carbon dioxide"</td><td class="open">Drilled</td></tr>
+          <tr><td class="y">1937</td><td>Aldercreek No. 1, Bluelight Gas and Oil Co.</td><td>Klickitat, WA · near Alderdale</td><td>1,545 ft</td><td>Slight gas and poor oil showings</td><td class="open">Drilled</td></tr>
+          <tr><td class="y">1946</td><td>Barber No. 1, Richfield Oil Corp.</td><td>Multnomah, OR · Portland area</td><td>7,885 ft</td><td>No significant oil or gas shows</td><td class="closed">Closed</td></tr>
+          <tr class="hl"><td class="y">1949</td><td>Kady-Olsen No. 1, Columbia River Oil Co.</td><td>Skamania, WA · west of Beacon Rock</td><td>750 ft</td><td>Oil at 250 ft; artesian fresh water at 750 ft</td><td class="open">Drilled</td></tr>
+          <tr><td class="y">1951–52</td><td>Lambert No. 1, Kastle Oil &amp; Gas Co.</td><td>Wasco, OR · 11 mi southwest of Dufur</td><td>220 ft</td><td>Cable tools</td><td class="closed">Closed</td></tr>
+          <tr><td class="y">1957</td><td>Kappler No. 1, Sunray Mid-Continent Oil Co.</td><td>Multnomah, OR · Portland area</td><td>1,666 ft</td><td>No shows encountered</td><td class="closed">Closed</td></tr>
+          <tr><td class="y">1959</td><td>Benedict No. 1, Adams-Benedict Oil Co.</td><td>Clark, WA · north Clark County</td><td>2,578 ft</td><td>Dry hole</td><td class="open">Drilled</td></tr>
+          <tr><td class="y">2008–09</td><td>Gray 31-23, Delta Petroleum</td><td>Klickitat, WA · near Alderdale</td><td>12,430 ft</td><td>A modern permitted deep test, fully documented</td><td class="closed">Plugged and abandoned</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="small muted" style="margin-top:12px">Also in Oregon's report: a 1949 water well in East Portland that "hit gas at 799', which had a strong odor of oil." It wasn't drilled for oil, so it isn't counted in the 17. "Drilled" in Washington's file and "not in the permit database" in Oregon's both mean the same thing: no later record of what happened to the hole. "Closed" is Oregon's permit status.</p>
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <h2>Reading one line closely</h2>
+      <p>Kady-Olsen's record is short, and every word of it is useful.</p>
+      <div class="record" role="note" aria-label="Excerpt from the DNR record for Kady-Olsen No. 1">
+        <div><span class="k">Well name:</span> Kady-Olsen No. 1</div>
+        <div><span class="k">Company:</span> Columbia River Oil Co.</div>
+        <div><span class="k">Location:</span> <mark>NE¼ of the NW¼ of the NE¼, Sec. 35, T2N R6E</mark></div>
+        <div><span class="k">Depth:</span> 750 ft</div>
+        <div><span class="k">Comments:</span> Cable tools. Oil showing reported at 250 ft. Reported to have penetrated Columbia River basalt near 590 ft. <mark>Hit artesian fresh water flow at 750 ft.</mark> Oil analysis from nearby seep.</div>
+        <div><span class="k">Status:</span> <mark>Drilled</mark></div>
+      </div>
+      <p style="margin-top:14px">The location line is a surveyor's address. It narrows the well to one 10-acre square, about 200 m on a side. State Route 14 runs right through it, between mileposts 34.2 and 34.4.</p>
+      <p>Then we pulled the free USGS aerial photos from the years right after the drilling. In 1952, 1953 and 1955, the same pale tracks leave the highway on its downhill side, fork into a Y, and run into the square. Features that hold their shape across three years of photos are real lanes or clearings. Today Moorage Road runs down through this ground to Beacon Rock State Park's campground and boat launch, so the tracks may be an early version of that road. A drill crew in 1949 would have used whatever road reached flat ground near the river, so the well could sit right beside it. Finding out is the next step.</p>
+      <p class="small muted">"Artesian fresh water" means the drill hit water under enough pressure to rise on its own. A hole like that, left open, can let groundwater layers mix or seep out at the surface. A proper plug is well understood and often paid for. What it needs first is someone knowing exactly where the well is. An old well beside a place people camp isn't unusual: in 2026 the Well Done Foundation <a href="https://welldonefoundation.org/well-done-foundation-plugs-orphan-well-at-a-pennsylvania-catholic-youth-camp-installs-permanent-stream-crossing-for-community/">plugged one at a youth camp in Pennsylvania</a>.</p>
+    </div>
+    <figure>
+      <div class="slider" id="slider" style="--pos:50%">
+        <img src="assets/square-today.jpg" alt="The 10-acre search square today: dense forest crossed by State Route 14, with a small clearing in the middle." width="1200" height="1189">
+        <img class="top" src="assets/square-1953.jpg" alt="The same square on September 4, 1953: pale tracks branch off the highway into the lower part of the square." width="1200" height="1189">
+        <div class="handle" aria-hidden="true"></div>
+        <span class="tag l">Sept. 1953</span><span class="tag r">Today</span>
+        <input type="range" min="0" max="100" value="50" id="slider-range" aria-label="Slide to compare 1953 with today">
+      </div>
+      <div class="strip">
+        <figure><img src="assets/square-1952.jpg" alt="The square in July 1952, with the same tracks." width="1200" height="1189" loading="lazy"><span>July 1952</span></figure>
+        <figure><img src="assets/square-1953.jpg" alt="The square in September 1953, the sharpest of the three." width="1200" height="1189" loading="lazy"><span>Sept. 1953</span></figure>
+        <figure><img src="assets/square-1955.jpg" alt="The square in July 1955, with the same tracks." width="1200" height="1189" loading="lazy"><span>July 1955</span></figure>
+      </div>
+      <figcaption>The amber square is the 10-acre area from the 1949 legal description. Drag across the top image to compare 1953 with today. Today's photo shows a gravel lane running east through the lower part of the square, right where the 1953 tracks ran. The old photos were lined up with today's imagery using Beacon Rock, the railroad and the highway, and are accurate to about 20 to 50 m.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <div>
+      <h2>Where our record fits nationally</h2>
+      <p>Across the country, the U.S. Geological Survey gathered <strong>117,672 documented, unplugged orphan wells</strong> from the records of 27 states. An orphan well is one with no responsible owner left to close it. The 2021 federal infrastructure law set aside about $4.7 billion to find and plug them, most of it through state programs.</p>
+      <p>State records like these are what that list is built from. Neither Washington nor Oregon is one of the 27 states on it, so their older wells, like Kady-Olsen and the Dufur wells, live in each state's own file.</p>
+      <p>Washington wells do get plugged this way. The Well Done Foundation, a nonprofit that plugs orphan wells, took on <a href="https://welldonefoundation.org/washington-orphaned-wells/barlow-001/">Barlow #001</a>, a 1964 well near the old Oil City area on the Olympic Peninsula, after the landowner's family reached out.</p>
+      <p>Many of the wells on the national list sit on land the public already owns. We matched the list to the national Protected Areas Database, and <strong>5,767 of them are on federal or state land</strong>: national forests, state forests and game lands, wildlife refuges, and parks. Those are places where hikers and neighbors can help check, with the land managers' permission.</p>
+    </div>
+    <figure>
+      <h3 style="font-size:22px">Orphan wells on public land, by land manager</h3>
+      <div class="bars" id="bars"></div>
+      <figcaption>USGS Documented Unplugged Orphaned Oil and Gas Well dataset (2022) matched by Open Gorge to PAD-US 4.1 fee ownership. Sage bars are federal land; amber bars are state land. Pennsylvania's Oil Creek State Park, in the valley where the American oil industry began, holds 267 on its own.</figcaption>
+    </figure>
+  </section>
+
+  <section class="one">
+    <div>
+      <h2>How the investigation works</h2>
+      <p>Every step starts from a record that already exists, and every tool is free. Together they cover the first stage of how a group like the Well Done Foundation <a href="https://welldonefoundation.org/about/our-process-plugging-wells/">takes on a well</a>: building its history and location profile, then checking it in the field. That's the legwork that has to happen before a well can be adopted and plugged.</p>
+      <ol class="steps">
+        <li><b>Read the well file</b>The state's record gives the company, year, depth and status.</li>
+        <li><b>Map the legal description</b>Section, township and range narrow it to a square on the ground.</li>
+        <li><b>Check who manages the land</b>County parcels and public-lands data say who to ask.</li>
+        <li><b>Pull the old photos</b>USGS aerials from the drilling era show what was there.</li>
+        <li><b>Look under the trees</b>Lidar maps show flat pads and old road cuts beneath the forest.</li>
+        <li><b>Check the ground</b>With permission, photograph and log what's there. Touch nothing.</li>
+        <li><b>Report it</b>Precise locations go to the state and to groups that plug wells.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="one">
+    <div>
+      <h2>About this project</h2>
+      <p class="lede2"><strong>Open Gorge</strong> is a neighbor-built, neighbor-run project that connects public data to real issues affecting people and land in the Columbia River Gorge.</p>
+      <p>This investigation starts from a record about a place many of us drive past, and it depends on people who know the ground: who remembers what, which track goes where, and who to ask. The records are public. The knowledge that makes them useful is local.</p>
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <h2>How to take part</h2>
+      <p>You don't need to be an expert. Pick the part that sounds fun.</p>
+      <p class="note">Please don't go looking on your own. The square sits between a busy highway and an active railroad, near homes, on land held by several public owners. Field visits happen only with the land managers' permission, and nobody digs, opens or touches anything.</p>
+      <p>Every record here is public, and every tool is free. What it takes is people who live here. Want in? <a href="https://opengorge.org/">Reach out through Open Gorge</a>.</p>
+    </div>
+    <div class="roles">
+      <div><h3>Read old news</h3><p>Local papers from 1949 may have covered an oil strike near Beacon Rock. So might a letter or a family story.</p></div>
+      <div><h3>Search the deeds</h3><p>The well is named for the landowners. County deed records under Kady and Olsen can show whose land it was.</p></div>
+      <div><h3>Compare photos</h3><p>Help check other flights and years for the same tracks, and look at lidar for a flat pad cut into the slope.</p></div>
+      <div><h3>Walk the ground</h3><p>Once permission is in hand: grid walks, GPS points and careful photos. A metal detector can flag buried steel without digging.</p></div>
+      <div><h3>Remember it</h3><p>If you or your family knew of "the oil well" out by Beacon Rock, we'd love to hear from you.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <h2>Try it where you live</h2>
+      <p>The same steps work in any county with a well file. Here's what we used, in the order we used it.</p>
+    </div>
+    <ul class="tools">
+      <li><a href="https://geologyportal.dnr.wa.gov/">Washington Geologic Information Portal</a>: the state's oil and gas well records, on a map. Other states keep their own; search for your state's oil and gas regulator.</li>
+      <li><a href="https://www.sciencebase.gov/catalog/item/62ebd67bd34eacf539724c56">USGS orphan well dataset</a>: the national list, free to download.</li>
+      <li><a href="https://earthexplorer.usgs.gov/">USGS EarthExplorer</a>: historic aerial photos back to the 1930s and 1940s. Search "Aerial Photo Single Frames."</li>
+      <li><a href="https://lidarportal.dnr.wa.gov/">Washington Lidar Portal</a>: bare-earth maps that show the ground under the trees.</li>
+      <li><a href="https://www.usgs.gov/programs/gap-analysis-project/science/pad-us-data-overview">PAD-US</a>: who owns and manages public land, nationwide.</li>
+      <li><a href="https://welldonefoundation.org/landowners/">Well Done Foundation</a>: a nonprofit that plugs orphan wells and works with landowners and communities.</li>
+    </ul>
+  </section>
+
+  <section class="one">
+    <div>
+      <h2>Sources and method</h2>
+      <ul class="sources">
+        <li>Well records: Washington DNR, Washington Geological Survey, <a href="https://gis.dnr.wa.gov/site1/rest/services/Public_Geology/Oil_and_Gas_Wells/MapServer">oil and gas wells database</a> (830 wells, 1890 to present), queried September 2026.</li>
+        <li>Oregon wells: DOGAMI permit records (Oregon Oil and Gas Viewer, 2021) and <a href="https://pubs.oregon.gov/dogami/mp/MP-06.pdf">Miscellaneous Paper 6, <em>Oil and Gas Exploration in Oregon</em></a> (compiled by R.E. Stewart, 1954; revised by V.C. Newton Jr., 1965), which cites Buwalda (1921) for the Dufur-area wells. Washington figures also cover Clark County.</li>
+        <li>Legal description: BLM Public Land Survey System grid. Mileposts: WSDOT state route milepost data.</li>
+        <li>Aerial photos: USGS single frames via EarthExplorer. July 28, 1952 (GS-QM 1-1); September 4, 1953 (GS-WM 77); July 20, 1955 (GS-VJQ 2-64). Today's view: USDA National Agriculture Imagery Program (NAIP), via USGS. Open Gorge lined up the old frames with today's imagery using fixed landmarks. The fit is good to about 20 to 50 m.</li>
+        <li>National list: USGS <a href="https://www.sciencebase.gov/catalog/item/62ebd67bd34eacf539724c56">Documented Unplugged Orphaned Oil and Gas Well dataset</a> (2022, doi:10.5066/P91PJETI). Public land: USGS PAD-US 4.1 fee ownership. Federal funding: U.S. Department of the Interior <a href="https://www.doi.gov/orphanedwells">Orphaned Wells Program</a>.</li>
+        <li>Well Done Foundation: <a href="https://welldonefoundation.org/about/our-process-plugging-wells/">plugging process</a>, <a href="https://welldonefoundation.org/washington-orphaned-wells/barlow-001/">Barlow #001</a> and the <a href="https://welldonefoundation.org/well-done-foundation-plugs-orphan-well-at-a-pennsylvania-catholic-youth-camp-installs-permanent-stream-crossing-for-community/">Volant, Pennsylvania youth camp project</a>.</li>
+        <li>County lines: U.S. Census TIGERweb. Scenic Area boundary: U.S. Forest Service.</li>
+        <li>Independent analysis by Kate Bertash for the Skamania Dispatch and Open Gorge. Nobody paid for it, and anyone can use it.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var data=[
+    ["National forests","Forest Service",1776,"fed"],
+    ["State trust lands","State land boards",1242,"state"],
+    ["State wildlife lands","State fish and wildlife",956,"state"],
+    ["State forests","State natural resource agencies",656,"state"],
+    ["State parks","",365,"state"],
+    ["Wildlife refuges","Fish and Wildlife Service",277,"fed"],
+    ["BLM land","Bureau of Land Management",267,"fed"],
+    ["Army Corps land","",145,"fed"],
+    ["Other public land","Defense, other state agencies",56,"fed"],
+    ["National parks","",27,"fed"]];
+  var max=data[0][2], el=document.getElementById('bars');
+  el.innerHTML=data.map(function(d){
+    var w=(d[2]/max*78).toFixed(1)+'%';
+    return '<div class="bar"><div class="lab">'+d[0]+(d[1]?'<small>'+d[1]+'</small>':'')+'</div>'+
+      '<div class="track" style="--w:'+w+'"><div class="fill'+(d[3]==='state'?' state':'')+'" style="width:'+w+'"></div>'+
+      '<span class="val">'+d[2].toLocaleString('en-US')+'</span></div></div>';
+  }).join('');
+  var s=document.getElementById('slider'), r=document.getElementById('slider-range');
+  if(s&&r){r.addEventListener('input',function(){s.style.setProperty('--pos',r.value+'%')});}
+})();
+</script>
+<script>
+(function(){
+  if(window.parent===window)return;
+  var last=0;
+  function send(){var h=Math.ceil(document.documentElement.scrollHeight);if(h!==last){last=h;window.parent.postMessage({type:'gorge-well-record:height',height:h},'*')}}
+  window.addEventListener('load',send);
+  if(window.ResizeObserver)new ResizeObserver(send).observe(document.documentElement);
+  setTimeout(send,1500);
+})();
+</script>
+</body>
+</html>
