@@ -24,7 +24,7 @@ wells = [
  ('Kappler, 1957', -122.884903, 45.673191, 'closed', False, 14, -12, 'start'),
  ('Water well that hit gas, 1949', -122.51209, 45.46465, 'open', False, 14, 22, 'start'),
  ('Lambert, 1952', -121.32, 45.382, 'closed', False, 14, 22, 'start'),
- ('Beavis May ×2, 1907 and 1919', -121.33, 45.45, 'open', True, -20, -16, 'end'),
+ ('Beavis May ×2, 1907, 1919', -121.33, 45.45, 'open', True, -20, -16, 'end'),
  ('Dufur Oil Co. ×5, before 1907', -121.23, 45.445, 'open', True, 16, 24, 'start'),
 ]
 svg = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-labelledby="map-title map-desc">',
@@ -36,13 +36,13 @@ for _, r in c.iterrows():
     svg.append(f'<path class="cty{" focus" if r.GEOID in GORGE else ""}" d="{path(g)}"/>')
 svg.append(f'<path class="nsa" d="{path(nsa.geometry.iloc[0].intersection(clip))}"/>')
 for name, x, y in [('CLARK', -122.50, 45.88), ('SKAMANIA', -121.95, 46.18), ('KLICKITAT', -120.72, 46.05),
-                   ('MULTNOMAH', -122.30, 45.335), ('HOOD RIVER', -121.66, 45.315), ('WASCO', -120.72, 45.42)]:
+                   ('MULTNOMAH', -122.20, 45.50), ('HOOD RIVER', -121.66, 45.345), ('WASCO', -120.98, 45.535)]:
     a, b = P(x, y); svg.append(f'<text class="cname" x="{a}" y="{b}">{name}</text>')
 for lab, x, y, st, approx, dx, dy, anc in wells:
     a, b = P(x, y)
     if approx: svg.append(f'<circle class="approx" cx="{a}" cy="{b}" r="17"/>')
     svg.append(f'<circle class="well {st}" cx="{a}" cy="{b}" r="7.5"/>')
     svg.append(f'<text class="wl" x="{a+dx}" y="{b+dy}" text-anchor="{anc}">{lab}</text>')
-svg.append(f'<g class="key" transform="translate(14,{H-16})"><line x1="0" y1="-6" x2="28" y2="-6" class="nsa"/><text x="36" y="0">National Scenic Area</text></g>')
+svg.append(f'<g class="key" transform="translate(14,30)"><line x1="0" y1="-6" x2="28" y2="-6" class="nsa"/><text x="36" y="0">National Scenic Area</text></g>')
 svg.append('</svg>')
 open('assets/_map.svg', 'w').write('\n'.join(svg)); print(W, H)
